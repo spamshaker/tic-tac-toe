@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "isolatedModules": true,
+    "moduleResolution": "Node",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "declarationDir": "types",
+    "declarationMap": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./packages",
+    "paths": {
+      "@ria-develop/*": [
+        "./*/src"
+      ]
+    }
+  },
+  "exclude": [
+    "**/__tests__/*"
+  ]
+}

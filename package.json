@@ -1,0 +1,87 @@
+{
+  "private": true,
+  "name": "@ria-develop/tic-tac-toe",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bem-cn": "^3.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.[t|j]sx?$": [
+        "babel-jest",
+        {
+          "presets": [
+            "@babel/preset-typescript",
+            "@babel/preset-react",
+            [
+              "@babel/preset-env",
+              {
+                "targets": {
+                  "node": "current"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "coveragePathIgnorePatterns": [
+      "dist",
+      "index.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\@ria-develop(.*)": "<rootDir>packages/$1/src"
+    },
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "@ria-develop"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@ria-develop/eslint-config": "^0.0.5",
+    "@ria-develop/webpack-config": "^0.0.6",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@testing-library/react-hooks": "^3.4.1",
+    "@types/jest": "^26.0.14",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/testing-library__jest-dom": "^5.9.2",
+    "babel-jest": "^26.3.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.9.0",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^26.4.2",
+    "lerna": "^3.22.1",
+    "less": "^3.12.2",
+    "prettier": "^2.1.2",
+    "react-test-renderer": "^16.13.1",
+    "typescript": "^4.0.3",
+    "webpack-cli": "^3.3.9",
+    "webpack": "^4.46.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
